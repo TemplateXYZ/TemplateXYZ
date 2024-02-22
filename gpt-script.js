@@ -1,4 +1,4 @@
-var currentDomain = window.location.hostname.toLowerCase();
+var currentDomain = "www.iticgpt.top";
 document.addEventListener("DOMContentLoaded", function() {
     var style = document.createElement('style');
     style.type = 'text/css';
