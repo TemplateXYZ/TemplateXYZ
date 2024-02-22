@@ -1,4 +1,3 @@
-var currentDomain = "www.iticgpt.top";
 document.addEventListener("DOMContentLoaded", function() {
     var style = document.createElement('style');
     style.type = 'text/css';
@@ -443,10 +442,6 @@ function removeBrTagsUnderTable(html) {
 
 function convert(text) {
     
-    if(domainLock()==0){
-      return false;
-    }
-    
     let strings = text;
   
     strings = convertToBold(strings);
@@ -486,10 +481,6 @@ let data = " ";
 
 document.getElementById('questionForm').addEventListener('submit', function(event) {
   event.preventDefault();
-  
-  if(domainLock()==0){
-    return false;
-  }
   
   if(isGeneratingAnswer){
     return 0;
@@ -559,14 +550,6 @@ document.getElementById('questionForm').addEventListener('submit', function(even
       return array[Math.floor(Math.random() * array.length)];
     }
     
-    function domainLock() {
-        var allowedDomain = "www.iticgpt.top";
-        if (currentDomain == allowedDomain) {
-            return 1;
-        } else {
-            return 0;
-        }
-    }
 
 function hideElementById(id) {
     var element = document.getElementById(id);
